@@ -26,7 +26,8 @@ for (let i = 0; i < btnsOpenModal.length; i++) {
 
 // keyup / keypress / keydown
 document.addEventListener('keydown', (e) => {
-    if (e.key == 'Escape') {
-        closeModal()
+    console.log(e.key);
+    if (e.key == 'Escape' && !modal.classList.contains('hidden')) {
+        closeModal();
     }
 })
